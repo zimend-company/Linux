@@ -23,3 +23,26 @@ python is cross-platform.
 // the second item change in each line
 > sed 's/python/perl/g2'  py.txt
 
+<p dir="rtl" align="right">در sed هر بار دستور برای هر خط جداگانه اجرا می شود</p>
+
+## 2 => 
+
+```
+lang.txt
+
+bash programming language. python programming language. perl programming language.
+hypertext markup language.
+extensible markup language.
+
+```
+
+> sed 's/\(.*\)programming/\1scripting/g' lang.txt
+
+<p dir="rtl" align="right">کد بالا آخربن موردی که اتفاق افتاده در هر خط را جایگزین می کند</p>
+
+> sed -e '$s/python/perl/g' python.txt
+
+> sed '1s/python/perl/g' python.txt
+
+
+
